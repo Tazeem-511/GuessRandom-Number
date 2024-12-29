@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4caf50; /* हल्का हरा */
+  --danger: #f44336; /* लाल */
+  --warning: #ff9800; /* नारंगी */
+  --background: #f9f9f9; /* हल्का ग्रे */
+  --text-dark: #333; /* गहरा टेक्स्ट */
+  --border: #ddd; /* बॉर्डर का रंग */
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+main {
+  width: 90%;
+  max-width: 50rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+main:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--border);
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: var(--warning);
+  transform: scale(1.05);
+}
+
+button:last-child {
+  background: var(--danger);
+}
+
+button:last-child:hover {
+  background: darkred;
+}
+
+#game_area {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--border);
+}
+
+input {
+  width: 80%;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.4rem;
+  border: 0.1rem solid var(--border);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.status {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.info span {
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

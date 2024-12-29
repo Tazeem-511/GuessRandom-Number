@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body onload="init()">
+
+    <main>
+        <div id="welcome_Screen">
+            <h2>Guess the random number between 1-100</h2>
+            <img class="image" src="9215092.jpg" alt="logo">
+
+            <section class="event_Section">
+                <p>Select the Dificility</p>
+                <div class="button_wrapper">
+                    <button  onclick="easymode()">Easy: 10 attemps</button>
+                    <button onclick="hardmode()">Hard: 5 attemps</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- our actual game aria  -->
+
+
+        <div id="game_area">
+            <div id="new_game_button">
+                <button onclick="newGame()">New Game</button>
+            </div>
+        
+
+        <section>
+            <h3 id="text_output">Your Guess</h3>
+            <input type="text" name="" id="input_box" min="1" max="100" placeholder="Enter Your Number" onchange="comguess()">
+        </section>
+
+        <section class="status">
+
+            <div class="info">
+                <p>Number of privious attempts</p>
+                <span id="attempts">0</span>
+            </div>
+
+            <div class="info">
+                <p>Number of privious Guesses</p>
+                <span id="guesses">0</span>
+            </div>
+
+        </section>
+    </div>
+
+
+    </main>
+
+    <script src="pro.js"></script>
+</body>
+
+</html>
